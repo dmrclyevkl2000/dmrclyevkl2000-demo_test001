@@ -1,0 +1,301 @@
+/* Experimental! */
+@charset "utf-8";
+
+@media screen and (max-device-width: 960px){
+/* iPhone css -- let us use for all mobile devices? */
+    body
+    {
+        margin:0px;
+        padding:0px;
+        /*
+        font-family:Arial, Helvetica, sans-serif;
+        font-family: 'Sintony', sans-serif;
+        font-family: 'Chango', cursive;
+        font-size:12pt;    
+        background: url("/images/bg/rainbow-mosiac.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+        */                              
+    }
+    #main
+    {
+        margin:0px auto 0px auto;
+        width:100%;
+        height: auto;
+        overflow:hidden; 
+    }
+#head img.companylogo 
+{
+    width:80%; 
+    height:110px; 
+    float:left;  
+    margin: 5px 0px 0px 5px;
+    border:none;
+}    
+#head img.companyslogan {
+    //margin: 10px 0 0;
+    display: none;
+    visibility: hidden;
+}    
+/* SM ICONS */
+#sm_icons 
+{
+    float: right;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+#sm_icons li.icons 
+{
+    border: medium none;
+    //margin: 1px 0 -10px;
+}			
+#sm_icons li.icons a img
+{
+    /*padding:0px;
+    float:left;*/
+    list-style:none;
+    display:inline;
+    width: auto;
+}
+    
+/* navigation edits */
+#nav_bar
+{
+    background: none repeat scroll 0 0 #FFFF99;
+    border-radius: 0 0 10px 10px;
+    float: none;
+    height: 30px;
+    width: 100%;
+    margin: auto;
+    z-index: 1100;
+    
+}
+
+#nav_bar ul{
+    /*	display:block; */
+    display:inline;
+    margin:auto;
+    list-style:none;
+    padding:auto;
+    text-align:center;
+    /*//float:right;*/
+    width:100%;
+}
+#nav_bar li
+{
+    display:inline; 
+    /*display:block;*/
+    list-style: none;
+    z-index:    1000;
+    width:100%;
+}
+
+#nav_bar li a, #nav_bar ul li#home.first a, #nav_bar ul li#moremenu.last a
+{
+    display:inline; 
+    font-weight:normal;
+    /*	text-decoration:none;*/
+    color:#000;
+    width:auto;
+    float:left;
+    padding:0 3% 0 3%;
+    border-right:1px solid #fff;
+    margin: auto;
+    font-size-adjust: 0.25;
+}
+
+/* visible pages */
+#home {visibility: visible; padding: 0px}
+#directions {visibility: visible; }
+#contact {visibility: visible; }
+#faq {visibility: visible; }
+/* hidden pages */
+#distributors {visibility: hidden;}
+#videos {visibility: hidden;}
+#articles {visibility: hidden;}
+#search {visibility: hidden;}
+#social {visibility: hidden;}
+#moremenu {visibility: hidden;}
+
+/* footer edits */    
+#footer-left li.small {        
+    /*
+    font-size: 0.42em;
+    display:inline;
+    width:220px;
+    margin:0;
+    list-style:none;
+    float:right;
+    border:none;
+    */
+    display: none;
+}
+
+#banner
+{
+    height:352px;
+    border:none;
+    margin:auto;
+    background-color:#FFFFFF;
+    clear:both;
+    padding:20px 0 20px 0;
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+#banner img
+{
+    /*//height:352px;*/
+    /*//border:none;*/
+    /*//margin:auto;*/
+    background-color:#FFFFFF;
+    clear:both;
+    padding:0px;
+    width: 100%;
+}
+
+#banner-vid {
+    height:auto;
+    min-height: 400px;
+    float:left;
+    width:100%;
+    background:#FFF;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 0 0 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* front page edits */    
+    #banner div.slideshow div a img
+    {
+        height: 100%;
+        width: 100%;
+    }
+
+    #banner div.slideshow div video object#flowplayer,
+    #banner div.slideshow div video object#flowplayer embed,
+    #banner div.slideshow div video {
+        position: relative;
+        width: 99%;
+        height: 99%;
+    }      
+      
+    #sample-theme
+    {
+        float: left;
+        margin: 0;
+        height: 75%;
+        width: 100%;
+        font-size: 150%;
+    }    
+    .sample-theme-con-icon
+    {
+        display:none;
+    }
+    .sample-theme-con-wrapper
+    { 
+        float:left; 
+        //height: 500px;
+        width:100%; 
+        padding:5px 10px 0px 20px;
+    }    
+    .sample-theme-con-text
+    {
+        height:auto;
+        float:left;
+        width:90%;
+        padding: 10px 10px 20px 20px;
+    }    
+    span.white, span.black
+    {
+        line-height:36px;
+        padding:0;
+        margin: 0px 0 0px 0;        
+    }    
+
+    
+/** directions page - Google Maps API styles **/
+      #panel {
+        position: absolute;
+        top: 5px;
+        //left: 50%;
+        //margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }         
+      #map-canvas {
+        width: 95%;
+        height: 350px;        
+        margin: 5px;
+        padding: 0px;
+      }
+      #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+        font-size-adjust: 0.1;
+        width: 75%;
+      }
+      #directions-panel {
+        height: 500px;
+        margin: 5px;
+        //float: right;
+        clear:both;
+        width: 95%;
+        overflow: auto;
+        display: none;
+      } 
+      #pre-directions-panel {
+        position: absolute;
+        /*height: 100%;*/
+        margin: 0px 30px 0px 500px;
+        float: right;
+        width: 45%;
+        z-index: 0;
+        overflow: auto;
+        display: none;
+        visibility: hidden;
+      }         
+      #pre-directions-panel img {
+          width: 95%;
+          height: 50px;
+          padding: 4%; 
+          float: left;
+          display: none;
+      }      
+      #control button#getDirections {
+          margin: 0 35%;
+          padding: 0px;
+      }
+      #control strong
+      {
+          display:none;
+          margin: 0 0 0 110px;
+      }      
+      #control input#start {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+      }    
+      
+/** contact page **/      
+      #banner-contact {
+          background: #ffffff; 
+          border-radius: 10px 10px 0px 0px; 
+          text-align: center;    
+      }
+      #contact-form {
+          padding: 1%;
+          margin: 1%;
+      }
+      #contact-form textarea {
+          width: 90%;
+      }     
+}
+

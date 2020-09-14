@@ -1,0 +1,74 @@
+/* admin-console-style-3b.css */
+@charset "utf-8";
+/* CSS Document */
+
+/* admin-console styling */
+/* Create New Page */
+#admin-console
+{
+    background:#ccc;
+    padding: 10px;
+    margin:0px;
+    border-radius: 10px;
+}
+/* pending */
+#pending {
+    background-color: #FFC;
+    font-weight:bold;
+}
+/*	#pending table * td {border:1px solid #FFF;} */
+/* live */
+#live {
+    background-color: #9FC;
+}
+/*	#live table * td {border:1px solid #FFF;} */
+/* deactivated */		
+#deactivated {
+    background-color: #FCF;
+    text-decoration:line-through;			
+}
+/*	#deactivated table * td {border:1px solid #000;} */	
+
+/* textareaCounter (jQuery) styles */
+.overview {
+    background: #FFEC9D;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #CCCCCC;
+}
+.originalTextareaInfo {
+    font-size: 12px;
+    color: #000000;
+    font-family: Tahoma, sans-serif;
+    text-align: right;
+}
+.warningTextareaInfo {
+    font-size: 12px;
+    color: #FF0000;
+    font-family: Tahoma, sans-serif;
+    text-align: right;
+}
+#showData {
+    height: 70px;
+    width: 200px;
+    border: 1px solid #CCCCCC;
+    padding: 10px;
+    margin: 10px;
+}
+
+.LV_valid {
+    background:url(../images/icon-pass.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    margin:0 0 0 3px;
+}
+.LV_invalid {
+    background:url(../images/icon-fail.png) no-repeat;
+    width:16px;
+    height:16px;
+    display:inline-block;
+    margin:0 0 0 3px;
+}                
+
+/* end admin-console styling */	

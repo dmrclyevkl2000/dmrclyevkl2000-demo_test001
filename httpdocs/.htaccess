@@ -1,0 +1,49 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+# BEGIN basic browser cache
+# 1 YEAR
+<FilesMatch "\.(ico|pdf|flv|zip|exe|avi)$">
+Header set Cache-Control "max-age=29030400, public"
+</FilesMatch>
+# 1 WEEK
+<FilesMatch "\.(jpg|jpeg|png|gif|swf)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+# 2 DAYS
+<FilesMatch "\.(xml|txt|css|js)$">
+Header set Cache-Control "max-age=172800, proxy-revalidate"
+</FilesMatch>
+# 1 HOUR
+<FilesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=360, private, proxy-revalidate"
+</FilesMatch>
+# END basic browser cache
+
+# BEGIN advanced cache
+<IfModule mod_deflate.c>
+    <IfModule mod_headers.c>
+        Header append Vary User-Agent env=!dont-vary
+    </IfModule>
+        AddOutputFilterByType DEFLATE text/css text/x-component application/x-javascript application/javascript text/javascript text/x-js text/html text/richtext image/svg+xml text/plain text/xsd text/xsl text/xml image/x-icon application/json
+    <IfModule mod_mime.c>
+        # DEFLATE by extension
+        AddOutputFilter DEFLATE js css htm html xml
+    </IfModule>
+</IfModule>
+# END advanced cache
+
+# BEGIN mod_rewrite
+#RewriteCond %{HTTP_HOST} ^_domain_name_\.tld$ [NC]
+#RewriteRule ^(.*)$ https://www._domain_name_\.tld/$1 [L,R=301]
+# END mod_rewrite
+
+# BEGIN Error Pages for //www._domain_name_.tld
+ErrorDocument 403 /error-pages/403-forbidden.php
+ErrorDocument 404 /error-pages/404-page-not-found.php
+ErrorDocument 500 /error-pages/500-internal-server-error.php
+ErrorDocument 502 /error-pages/500-internal-server-error.php
+ErrorDocument 503 /error-pages/500-internal-server-error.php
+ErrorDocument 504 /error-pages/500-internal-server-error.php
+# END Error Pages for //www._domain_name_.tld

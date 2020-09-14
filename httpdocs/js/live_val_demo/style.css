@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*---------------- Live Validation ---------------*/
+.LV_valid {
+	background:url(../images/icon-pass.png) no-repeat;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	margin:0 0 0 3px;
+}
+.LV_invalid {
+	background:url(../images/icon-fail.png) no-repeat;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	margin:0 0 0 3px;
+}
