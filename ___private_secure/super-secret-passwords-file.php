@@ -1,7 +1,7 @@
 <?php //include with "./includes/config_setup.php"
 /*****#####     BEGIN DB Credentials     #####*****/
 /* PDO reference variables for /includes/config_setup.php are below 
-    $PDO_host       = '127.0.0.1';
+    $PDO_host       = '172.20.0.10';
     $PDO_port       = '3306';
     $PDO_dbname     = 'jmicrocms';
     $PDO_charset    = 'utf8mb4';
